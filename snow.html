@@ -1,0 +1,190 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://schoolhouse-learning.web.app/site/Snowy.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SN0W</title>
+</head>
+<body>
+
+    <ul class="navbar">
+        
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/home.html'"><a class="home">Home</a></li>
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/games.html'"><a class="games">Games</a></li>
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/links.html'"><a class="links">Links</a></li>
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/apps.html'"><a class="notes">Apps</a></li>
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/notes.html'"><a class="setings">Updates</a></li>
+        <li class="nav-item" onclick="document.getElementById('video').src = 'https://schoolhouse-learning.web.app/site/settings.html'"><a class="setings">Settings</a></li>
+        <li class="nav-item" onclick="fullscreen();"><div id="fsbutton" onclick="fullscreen();" style="top: 119px;">Fullscreen</div></li>
+        
+
+    </ul>
+    <iframe id="video" src="https://schoolhouse-learning.web.app/site/home.html" frameborder="0" allowfullscreen="" height="100%" width="100%" style="height: 489px;"></iframe>
+
+    <footer class="footer">
+      <a href="https://youtube.com/@A.E.Robotics">
+        <img src="images logos/youtube_favicon-removebg-preview.png">
+      </a> 
+      <a href="https://github.com/f4fd">
+        <img src="images logos/github_favicon-removebg-preview.png">
+      </a>
+      | © Copyright 2023-<script>document.write(new Date().getFullYear())</script>2024 SN0W | All Rights Reserved |
+
+      <div class="views">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=12577608&amp;style=0025&amp;nbdigits=5&amp;type=page&amp;initCount=733" title="Counter Widget" alt="Visit counter For Websites" border="0" jcy0rislt="">                                    
+      </div>
+    </footer>
+    
+
+
+    <script>
+        var frame=document.getElementById("video");
+  var fsbutton=document.getElementById("fsbutton");
+        
+function get_cookie(cookie_name) { const value = "; " + document.cookie; const parts = value.split("; " + cookie_name + "="); if (parts.length === 2) return parts.pop().split(";").shift(); } 
+    function blank(){
+      (function () {var url = document.URL; var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe);window.location.href="https://google.com";})();
+    }
+
+     if (get_cookie("location")!=null){
+          frame.src=get_cookie("location");
+  }
+        
+
+  fsbutton.style.top=(document.getElementsByClassName("navbar")[0].offsetHeight-16)+"px";
+  
+  frame.style.height=(window.innerHeight-document.getElementsByClassName("navbar")[0].offsetHeight+2)+"px";
+
+  function fullscreen(){
+    if (frame.requestFullscreen) {
+      frame.requestFullscreen();
+    } else if (frame.webkitRequestFullscreen) {
+      frame.webkitRequestFullscreen();
+    } else if (frame.msRequestFullscreen) {
+      frame.msRequestFullscreen();
+    }
+  }
+  
+    </script>
+
+<style>
+  img{
+    height: 30px;
+    margin: 5px;
+  }
+ .footer { 
+    position:absolute; 
+    bottom: 5px; 
+    font-size: 15px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    z-index: 10;
+    color: rgb(80, 80, 80);
+}
+
+    iframe{
+        position: absolute;
+        left: 0;
+        top: 50px;
+    }
+
+
+
+    .navbar .nav-item{
+        background-color: rgb(14, 14 ,14);
+        height: 50px;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        float:left;
+        color: #f2f2f2;
+        text-align: center;
+        padding:2px 12px;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 900;
+        border-style:none;
+        transition: .5s;
+    }
+
+    .navbar a{
+        color: #f2f2f2;
+        text-align: center;
+        padding:2px 12px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 900;
+        border-style:none;
+        cursor:pointer;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     }
+    .navbar .nav-item:hover{
+        background-color: #515151;
+        height: 50px;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        float:left;
+        color: #f2f2f2;
+        text-align: center;
+        padding:2px 12px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 900;
+        border-style:none;
+        cursor:pointer;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+    }
+
+    ul {
+  list-style-type: none;
+}
+    .navbar .nav-item:focus{
+        
+        background-color: #515151;
+        height: 50px;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        float:left;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #f2f2f2;
+        text-align: center;
+        padding:2px 12px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 900;
+        border-style:none;
+        display: flex;
+
+    }
+
+
+
+    body{
+        background-color: rgb(14, 14 ,14);
+    }
+
+    .fs{
+        background-color: rgb(14, 14 ,14);
+        height: 50px;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        float:left;
+        color: #f2f2f2;
+        text-align: center;
+        padding:2px 12px;
+        text-decoration: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 900;
+        border-style:none;
+        transition: .5s;
+    }
+</style>
+</body></html>
